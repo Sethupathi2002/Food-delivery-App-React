@@ -1,0 +1,70 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.navbar-logo {
+    cursor: pointer;
+}
+
+.navbar-list-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar-list-items li:hover {
+    cursor: pointer;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar-right-icons {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar-right-icons img:hover {
+    cursor: pointer;
+}
+
+
+.sign-in-button {
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 10px 20px;
+    color: black;
+}
+
+.sign-in-button:hover {
+    background-color: rgb(178, 178, 178);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.navbar-list-items li.active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid black;
+}
+
+.navbar-right-icons-basket {
+    position: relative;
+}
+
+.navbar-right-icons-basket .navbar-right-icons-basket-dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+
+}
