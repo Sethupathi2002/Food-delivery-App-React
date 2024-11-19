@@ -39,3 +39,30 @@
     border-radius: 16px;
     border: 1px solid black;
 }
+
+@media (max-width: 1050px) {
+
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .header-contents h2 {
+        font-size: 2rem;
+    }
+
+    .header-contents {
+        max-width: 65%;
+    }
+
+    .header-contents p {
+        display: none;
+    }
+
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+
+}

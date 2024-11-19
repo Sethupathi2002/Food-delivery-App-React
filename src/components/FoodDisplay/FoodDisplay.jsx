@@ -4,21 +4,23 @@ import { StoreFoodContext } from '../../context/StoreFoodContext';
 import FoodItem from '../FoodItems/FoodItem';
 
 const FoodDisplay = ({ category }) => {
-    const { food_list } = useContext(StoreFoodContext); // Destructuring from context
+    const { food_list } = useContext(StoreFoodContext);
 
     return (
         <div className='food-display' id='food-display'>
             <h2>Top dishes near you</h2>
             <div className="food-display-list">
                 {food_list.map((item, index) => (
-                    <FoodItem
-                        key={item._id}
-                        id={item._id}
-                        name={item.name}
-                        price={item.price}
-                        description={item.description}
-                        image={item.image}
-                    />
+                    (category === "All" || category === item.category) && (
+                        <FoodItem
+                            key={item._id}
+                            id={item._id}
+                            name={item.name}
+                            price={item.price}
+                            description={item.description}
+                            image={item.image}
+                        />
+                    )
                 ))}
             </div>
         </div>
